@@ -8,6 +8,103 @@
     <title>GACEB Scholar | Learn. Share. Rise.</title>
   </head>
   <body>
+    <!-- Floating Donate to GACEB Button -->
+<a
+  href="YOUR-DONATION-LINK"
+  class="gaceb-donate-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Donate to GACEB"
+>
+  <span class="gaceb-heart">♥</span>
+  <span>Donate to GACEB</span>
+  <span class="gaceb-arrow">↗</span>
+</a>
+
+<style>
+.gaceb-donate-float {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 15px 22px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 215, 100, 0.75);
+
+  background: rgba(212, 175, 55, 0.84);
+  color: #3b2600;
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18),
+    0 0 15px rgba(212, 175, 55, 0.20);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  animation: gaceb-float 3s ease-in-out infinite;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gaceb-donate-float:hover {
+  background: rgba(255, 215, 100, 0.96);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.22),
+    0 0 22px rgba(212, 175, 55, 0.38);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.gaceb-heart {
+  font-size: 19px;
+  color: #6b1645;
+}
+
+.gaceb-arrow {
+  font-size: 17px;
+}
+
+@keyframes gaceb-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile-friendly sizing */
+@media (max-width: 480px) {
+  .gaceb-donate-float {
+    right: 14px;
+    bottom: 18px;
+    padding: 13px 17px;
+    font-size: 13px;
+    gap: 8px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .gaceb-donate-float {
+    animation: none;
+    transition: none;
+  }
+}
+</style>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
